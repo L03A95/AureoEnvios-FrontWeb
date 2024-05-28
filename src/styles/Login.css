@@ -1,0 +1,22 @@
+.login_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login_input {
+    display: inline-block;
+    width: max-content;
+    font-size: 1em;
+    margin: 0.5em;
+}
+
+.login_btn {
+    width: max-content;
+    padding: 0.5em;
+    border: 2px solid #000;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 1em;
+    margin: 1em;
+}
