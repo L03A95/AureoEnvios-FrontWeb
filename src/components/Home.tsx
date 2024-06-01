@@ -1,11 +1,33 @@
 import "../styles/Home.css"
 import box from "../assets/images/caja.png"
 import truck from "../assets/images/camion.png"
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+
+const ENDPOINT = import.meta.env.VITE_API_USER_ENDPOINT
+
 
 export default function Home () {
     const [hovered, setHovered] = useState("");
+
+    console.log(ENDPOINT);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await fetch(ENDPOINT);
+                const data = await response.json();
+                console.log(data); // Verifica que los datos sean correctos
+            } catch (error) {
+                console.error("Error fetching data:", error);
+            }
+        };
+
+        fetchData();
+    }, []);
+
+    // const response = await fetch(ENDPOINT)
+    // console.log(response);
 
     return (
         <article className="main_login">

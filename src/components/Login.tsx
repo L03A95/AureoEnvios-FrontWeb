@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom"
+import {  useParams } from "react-router-dom"
 import "../styles/Login.css"
 import { useEffect } from "react"
 import { SignIn } from "@clerk/clerk-react"

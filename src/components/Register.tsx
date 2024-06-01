@@ -1,20 +1,22 @@
 import { SignUp } from "@clerk/clerk-react"
-import { useParams } from "react-router-dom"
+import { useParams, useNavigate } from "react-router-dom"
+import { useEffect } from "react"
 
 
 
 export default function Register () {
 
     const param = useParams()
+    const navigate = useNavigate()
+
+    useEffect(() => {
+        if (param.usertype !== "driver" && param.usertype !== "client") {
+            navigate('/');
+        }
+    }, [param, navigate]);
 
 
     return <>
-        {/* <form>
-            <p>{param.userType}</p>
-            <input type="email" placeholder="Email" />
-            <input type="password" placeholder="Contraseña" />
-            <button type="submit">Registrar</button>
-        </form> */}
         <SignUp signInUrl="/sign-in"></SignUp>
     </>
 }
