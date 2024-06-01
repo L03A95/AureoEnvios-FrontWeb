@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 export default function Home () {
     const [hovered, setHovered] = useState("");
 
-    return <main className="main_bg">
+    return (
         <article className="main_login">
             <h2 className="main_text">Inicia sesión para empezar a enviar</h2>
             <ul className="login_button_wrapper">
@@ -23,5 +23,6 @@ export default function Home () {
             </ul>
 
         </article>
-    </main>
+        )
+
 }

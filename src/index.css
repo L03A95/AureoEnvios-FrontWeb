@@ -6,3 +6,9 @@
   font-family:'Poppins', 'sans-serif';
 
 }
+
+
+@font-face {
+  font-family: 'Poppins';
+  src: url(./assets/fonts/Poppins-Regular.ttf);
+ }
