@@ -14,11 +14,11 @@ export default function Home () {
                 <li className="login_list"  >
                     <img src={truck} className={`main_image truck ${hovered === "client" ? "dim" : ""}
                     ${hovered === "driver" ? "selected" : ""}`}/>
-                    <Link to="/login/driver" className="login_button driver" onMouseEnter={() => setHovered("driver")} onMouseLeave={() => setHovered("")}>Soy conductor</Link>
+                    <Link to="/sign-in/driver" className="login_button driver" onMouseEnter={() => setHovered("driver")} onMouseLeave={() => setHovered("")}>Soy conductor</Link>
                 </li>
                 <li className="login_list" >
                     <img src={box} className={`main_image box ${hovered === "driver" ? "dim" : ""} ${hovered === "client" ? "selected" : ""}`}/>
-                    <Link to="/login/user" className="login_button client" onMouseEnter={() => setHovered("client")} onMouseLeave={() => setHovered("")}>Soy cliente</Link>
+                    <Link to="/sign-in/client" className="login_button client" onMouseEnter={() => setHovered("client")} onMouseLeave={() => setHovered("")}>Soy cliente</Link>
                 </li>
             </ul>
 
